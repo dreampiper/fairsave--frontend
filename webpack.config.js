@@ -35,7 +35,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/html/uploaded.html",
       inject: true,
-      chunks: ["uploaded"],
+      chunks: ["global", "uploaded"],
       filename: "uploaded.html",
     }),
     new MiniCssExtractPlugin({
@@ -44,7 +44,7 @@ module.exports = {
     }),
     new webpack.WatchIgnorePlugin({
       paths: [/\.js$/, /\.d\.ts$/],
-    }),
+    }), 
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
