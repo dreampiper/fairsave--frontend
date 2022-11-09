@@ -14,6 +14,7 @@ buttons.show.onclick = async () => {
   elem.src = c;
   elem.setAttribute("width", "1024");
   elem.setAttribute("alt", "DreamUp");
+  elem.setAttribute("class", "imageHolder");
 };
 
 buttons.remove.onclick = async () => {
