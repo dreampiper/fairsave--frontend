@@ -1,0 +1,190 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("./images/bg-image.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    h1 {
+        position: absolute;
+        width: 89px;
+        height: 67px;
+        left: 35px;
+        top: 21px;
+        font-family: 'Irish Grover', cursive;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 55.5691px;
+        line-height: 67px;
+        color: #4E96EC;
+    }
+    
+    #save {
+        font-family: 'Irish Grover', cursive;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 55.5691px;
+        line-height: 67px;
+        color: #FFFFFF;
+    }
+    
+    #message {
+        position: absolute;
+        width: 223px;
+        height: 29px;
+        left: 172.27px;
+        top: 131.79px;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #EEEEEE;
+    }
+    
+    .container {
+        position: absolute;
+        width: 935.46px;
+        height: 401.25px;
+        left: 172.27px;
+        top: 181.04px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .item1 {
+        width: 608px;
+        height: 401.25px;
+        background: #221D28;
+        border-radius: 20px;
+    }
+    
+    .item2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    #upload {
+        width: 300px;
+        height: 80px;
+        background: rgba(0, 0, 0, 0.85);
+        border: 3px solid #000000;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    #share {
+        width: 300px;
+        height: 80px;
+        background: rgba(0, 0, 0, 0.85);
+        border: 3px solid #000000;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    #bookmark {
+        width: 300px;
+        height: 80px;
+        background: rgba(0, 0, 0, 0.85);
+        border: 3px solid #000000;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .icon-message {
+        width: 159px;
+        height: 29px;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.86);
+        text-decoration: none;
+    }
+    
+    .icon-message:hover {
+        text-decoration: none;
+    }
+    
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    #agree {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    #terms {
+        color: hsla(213, 81%, 62%, 1);
+    }
+    
+    .nav-link {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #CBCBCB;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .nav-link:hover {
+        text-decoration: none;
+    }
+    
+    .nav-bar li {
+        float: left;
+        padding: 0 5px;
+        border-right: 1px hsla(213, 81%, 62%, 1) solid;
+        list-style: none;
+    }
+    
+    .nav-bar li:last-child {
+        border-right: none;
+    }
+    
+    #contact {
+        color: hsla(213, 81%, 62%, 1);
+    }
