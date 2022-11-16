@@ -1,4 +1,5 @@
 require("../css/main.css");
+import copyTextToClipboard from "./utils/copyTextToClipboard";
 
 /* --------------- Global Vars --------------- */
 // Don't try this at work :P.
@@ -42,7 +43,7 @@ contentIds.forEach((id) => {
 });
 
 // Buttons.
-const buttonIds = ["find", "bookmark", "getBookmark", "saveBookmark"];
+const buttonIds = ["find", "bookmark", "getBookmark", "saveBookmark", "share"];
 const buttons: { [key: string]: HTMLButtonElement } = {};
 buttonIds.forEach((id) => {
   buttons[id] = document.getElementById(id) as HTMLButtonElement;
@@ -72,6 +73,12 @@ buttons.find.onclick = () => {
 
 buttons.bookmark.onclick = () => {
   content.saveModal.style.display = "flex";
+};
+
+buttons.share.onclick = () => {
+  const href = `https://${cid}.ipfs.w3s.link`;
+  copyTextToClipboard(href);
+  alert("Copied Link");
 };
 
 buttons.saveBookmark.onclick = (ev) => {
@@ -269,5 +276,3 @@ function getBookmark() {
       console.log(e);
     });
 }
-
-export {};
