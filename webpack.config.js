@@ -12,13 +12,11 @@ module.exports = {
   },
   devtool: "source-map",
   entry: {
-    global: "./src/ts/global.ts",
     index: "./src/ts/index.ts",
-    uploaded: "./src/ts/uploaded.ts",
   },
   mode: "production",
   output: {
-    filename: "[name].[hash:20].js",
+    filename: "[name].[contenthash:20].js",
     path: buildPath,
   },
   devServer: {
@@ -29,14 +27,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/html/index.html",
       inject: true,
-      chunks: ["global", "index"],
+      chunks: ["index"],
       filename: "index.html",
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/html/uploaded.html",
-      inject: true,
-      chunks: ["global", "uploaded"],
-      filename: "uploaded.html",
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
@@ -44,7 +36,7 @@ module.exports = {
     }),
     new webpack.WatchIgnorePlugin({
       paths: [/\.js$/, /\.d\.ts$/],
-    }), 
+    }),
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],

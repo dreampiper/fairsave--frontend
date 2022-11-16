@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "Dreampiper",
-        "Fairsave"
-    ]
+        "Fairsave",
+        "formdata"
+    ],
+    "liveServer.settings.port": 5501
 }

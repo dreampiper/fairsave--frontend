@@ -1,3 +1,401 @@
-.imageHolder {
-  border-radius: 50px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(../img/bg.png),
+    radial-gradient(circle closest-side, #000 10%, #000 70%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffff;
+  font-family: inter, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .................... NAV BAR .................... */
+nav {
+  display: block;
+}
+
+.logo {
+  width: 20rem;
+  height: auto;
+  margin-left: 3.5rem;
+  margin-top: 2.1rem;
+}
+
+/* .................... VIEW1 .................... */
+#view1 {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.8rem;
+  color: #ffffff;
+}
+
+.heading p {
+  margin-top: 5vh;
+  height: 2.9rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: #eeeeee;
+}
+
+.uploadButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#homeButtons {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#homeButtons label {
+  display: flex;
+}
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  width: 30rem;
+  height: 8rem;
+  background: rgba(0, 0, 0, 0.85);
+  border: 0.3rem solid #000000;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+.button img {
+  width: 3.6rem;
+}
+
+.button label p {
+  width: 12ch;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  color: rgba(255, 255, 255, 0.86);
+  cursor: pointer;
+}
+
+#tutorial {
+  margin-top: 15vh;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.9rem;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+#fileUploadStats {
+  margin: 0 3rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 8rem;
+  background: rgba(0, 0, 0, 0.85);
+  border: 0.3rem solid #000000;
+  border-radius: 1.2rem;
+  display: none;
+}
+
+.fileUploadStats--details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 28ch;
+}
+
+.fileUploadStats--details img {
+  width: 3.6rem;
+}
+
+.fileUploadStats--details p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+#fileUploadStats--title {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+#fileUploadStats--uploadPercent {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.progress-details {
+  display: flex;
+  align-items: center;
+}
+
+#fileUploadStats--progress-bar {
+  height: 1rem;
+  width: 40vw;
+  margin: 0 1rem;
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+}
+
+#fileUploadStats--progress-bar > div {
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: linear-gradient(89.96deg, #7bb8ff -3.85%, #0075ff 49.96%);
+  background-size: 40vw 100%;
+  transition: width 200ms;
+}
+
+/*.................... VIEW2 ....................*/
+#view2 {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.message {
+  width: 100%;
+  margin-bottom: 2rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #eeeeee;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+#imageHolder {
+  width: 608px;
+  height: 401.25px;
+  background: #fff;
+  border-radius: 15px;
+  margin-right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#imageHolder > img {
+  height: 100%;
+  max-width: auto;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+/*.................... MODAL ....................*/
+.modal {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 9, 11, 0.781);
+  z-index: 2000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  width: 72.923rem;
+  background: rgba(15, 9, 11, 0.95);
+  border: 0.2rem solid #616161;
+  border-radius: 23px;
+  cursor: initial;
+}
+
+.modalContainer form {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modalContainer input {
+  background-color: #3e404b;
+  width: 51.51rem;
+  padding: 1rem 2.385rem;
+  outline: none;
+  border: 0;
+  height: 6rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+.modalContainer input::placeholder {
+  color: #8f92ab;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+.modalContainer button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.911rem;
+  height: 6rem;
+  background: #3794ff;
+  border-radius: 1.5rem;
+  line-height: 2.9rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.findResult {
+  padding: 1rem 0;
+  height: 40rem;
+  border-radius: 0 0 23px 23px;
+  overflow-y: auto;
+  border-top: 0.1rem solid #616161;
+}
+
+.findResult a {
+  display: inline-flex;
+  justify-content: space-between;
+  color: #ffffff;
+  text-decoration: none;
+  width: 100%;
+  line-height: 2.9rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+.modal > a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*.................... FOOTER-SECTION ....................*/
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2vh;
+}
+
+.footer p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #cbcbcb;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer span,
+.footer .span {
+  color: #4e96ec;
+}
+
+/* Contributed by https://github.com/SHAKUURR/FAIRSAVER */
+/* Contributed by https://github.com/Chidera-Ok/fairsave--frontend */

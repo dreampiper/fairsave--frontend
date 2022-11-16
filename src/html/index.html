@@ -6,9 +6,114 @@
   </head>
 
   <body>
-    <div>
-      <button id="alert">Show Message</button>
-      <footer>&copy; 2022 Fairsave</footer>
-    </div>
+    <nav>
+      <img src="../img/logo.png" class="logo" />
+    </nav>
+
+    <main>
+      <div id="view1">
+        <div class="heading">
+          <h1>Post your images here</h1>
+          <p>
+            Get permanent links for Facebook, Twitter, message boards and blogs
+          </p>
+        </div>
+
+        <div id="homeButtons">
+          <div class="button">
+            <img src="../img/Image.svg" alt="image" />
+            <input type="file" id="upload" accept="image/*" hidden />
+            <label for="upload"><p>Upload&nbsp;Image</p></label>
+          </div>
+
+          <div class="button" id="find">
+            <img src="../img/Search.svg" alt="search" />
+            <label><p>Find&nbsp;Bookmark</p></label>
+          </div>
+        </div>
+
+        <p id="tutorial">
+          Click to Upload Image to save an image or Find Bookmark to get
+          previously tagged images
+        </p>
+
+        <div id="fileUploadStats">
+          <div class="fileUploadStats--details">
+            <img src="../img/Upload.svg" alt="search" />
+            <p>Uploading</p>
+          </div>
+          <div>
+            <p id="fileUploadStats--title"></p>
+            <div class="progress-details">
+              <div id="fileUploadStats--progress-bar">
+                <div></div>
+              </div>
+              <p id="fileUploadStats--uploadPercent"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="view2">
+        <p class="message">Upload completed!</p>
+
+        <div class="container">
+          <div id="imageHolder"></div>
+
+          <div class="uploadButtons">
+            <div class="button" id="upload">
+              <img src="../img/Image.svg" alt="image" />
+              <input type="file" id="upload2" accept="image/*" hidden />
+              <label for="upload2"><p>Upload&nbsp;Image</p></label>
+            </div>
+
+            <div class="button" id="share">
+              <img src="../img/Send.svg" alt="share image link" />
+              <label><p>Share Link</p></label>
+            </div>
+
+            <div class="button" id="bookmark">
+              <img src="../img/Bookmark.svg" alt="bookmark image" />
+              <label><p>Bookmark</p></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="saveModal">
+        <div class="modalContainer" id="saveModalContainer">
+          <form>
+            <input type="text" id="saveBookmarkInput" placeholder="Enter the image tag" name="q" />
+            <button type="submit" id="saveBookmark">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal" id="findModal">
+        <div class="modalContainer" id="findModalContainer">
+          <form>
+            <input type="text" id="getBookmarkInput" placeholder="Enter the image tag" name="q" />
+            <button type="submit" id="getBookmark">Search</button>
+          </form>
+
+          <div class="findResult"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <h3>
+        By uploading images to our site you agree to the
+        <span><a href="#" class="span"> &nbsp;Terms of Use</a></span>
+      </h3>
+      <p>
+        <a href="#">About</a> <span>|</span> <a href="#">Terms of Use</a>
+        <span>|</span> <a href="#">Privacy</a>
+        <span>|<a href="#" class="span"> Contact us</a></span>
+      </p>
+    </footer>
   </body>
 </html>
+
+<!-- Contributed by https://github.com/SHAKUURR/FAIRSAVER -->
+<!-- Contributed by https://github.com/Chidera-Ok/fairsave--frontend -->
