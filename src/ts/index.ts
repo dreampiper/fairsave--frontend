@@ -248,6 +248,10 @@ function getBookmark() {
     .then((response: { msg: any[] }) => {
       var target = document.querySelector(".modal .findResult");
 
+      while (target.firstChild) {
+        target.removeChild(target.firstChild);
+      }
+
       response.msg.forEach((res) => {
         const template = `
         <a href="https://${res.cid}.ipfs.w3s.link">
