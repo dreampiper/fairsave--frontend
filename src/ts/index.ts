@@ -7,7 +7,7 @@ import copyTextToClipboard from "./utils/copyTextToClipboard";
 let cid: string;
 let title: string;
 
-const server = "http://localhost:3000";
+const server = "http://127.0.0.1:3000"; // FIXME: Incase the server changes.
 
 /* --------------- Get DOM --------------- */
 
